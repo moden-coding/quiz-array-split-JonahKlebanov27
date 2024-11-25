@@ -54,10 +54,16 @@ public class App {
 
     }
 
-    public static int maxWordLength(String sentence){
+    public static int maxWordLength(String sentence){ 
+       String words [] = sentence.split(" ");
+       int maxWordLength = words[0].length(); 
+       for(String word:words){
+        if(word.length() > maxWordLength){
+            maxWordLength=word.length();
+        }
+       }
 
-
-        return -1; //this is a placeholder
+        return maxWordLength; //this is a placeholder
     }
 
 
